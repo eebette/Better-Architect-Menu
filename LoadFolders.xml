@@ -1006,6 +1006,7 @@
     <li IfModActive="ellit.ilkoftheoldones">Mods and Shit/El's Ilk of the Old Gods</li>
     <li IfModActive="lambda.smugglersrun">Mods and Shit/Smuggler's Run</li>
     <li IfModActive="ferny.progressionattire">Mods and Shit/Progression Attire</li>
+    <li IfModActive="ferny.progressionammunition">Mods and Shit/Progression Ammunition</li>
     <li IfModActive="uv.lunartika">Mods and Shit/Utility Vehicle</li>
     <li IfModActive="quartz.floorstoragetanks">Mods and Shit/Floor Mounted Fuel Tanks</li>
     <li IfModActive="vr.fantasy.biotech">Mods and Shit/Fantasy Biotech</li>
@@ -1116,6 +1117,10 @@
     <li IfModActive="drilledhead.Wallpenmarker">Mods and Shit/DHM Wallpenmarker</li>
     <li IfModActive="forti.rimtoll">Mods and Shit/RimToll</li>
     <li IfModActive="vanillaexpanded.gravship2">Mods and Shit/VE Gravship 2</li>
+    <li IfModActiveAny="natsuki.manipulatorbeam,kvr.beamconstructor">Mods and Shit/Ultratech Automation</li>
+    <li IfModActive="natsuki.manipulatorbeam">Mods and Shit/Manipulator Beam Emitter</li>
+    <li IfModActive="kvr.beamconstructor">Mods and Shit/Beam Constructor</li>
+    <li IfModActive="koni.misc.toxlamps">Mods and Shit/Toxlamps</li>
     <!-- (Add new mods here ^^^^^) -->
   </v1.6>
 </loadFolders>

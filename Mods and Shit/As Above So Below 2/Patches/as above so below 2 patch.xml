@@ -40,6 +40,38 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/ThingDef[defName="AB_WallRiserPower"]</xpath>
+    <value>
+      <designationCategory>Ferny_Elevation</designationCategory>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/ThingDef[defName="AB_WallRiserPipe"]</xpath>
+    <value>
+      <designationCategory>Ferny_Elevation</designationCategory>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/ThingDef[defName="AB_WallRiserClimate"]</xpath>
+    <value>
+      <designationCategory>Ferny_Elevation</designationCategory>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>/Defs/ThingDef[defName="AB_WallRiserData"]</xpath>
+    <value>
+      <designationCategory>Ferny_Elevation</designationCategory>
+    </value>
+  </Operation>
+
   <Operation Class="PatchOperationConditional">
     <xpath>/Defs/ThingDef[defName="AB2_StairsDown"]/uiOrder</xpath>
     <match Class="PatchOperationReplace">

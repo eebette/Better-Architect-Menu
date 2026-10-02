@@ -528,6 +528,10 @@ namespace BetterArchitect
 
 
                 Text.Anchor = TextAnchor.MiddleLeft; Widgets.Label(labelRect, label); Text.Anchor = TextAnchor.UpperLeft;
+                if (MysteryUnlockRuntime.Active)
+                {
+                    MysteryUnlockRuntime.DrawPendingMarker(rowRect, cat?.defName, designatorDataList.FirstOrDefault(d => d.def == cat)?.buildables);
+                }
                 curY += rowRect.height + 5;
             }
             Widgets.EndScrollView();

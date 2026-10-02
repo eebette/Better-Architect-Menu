@@ -20,6 +20,8 @@ namespace BetterArchitect
         private static readonly Color ScrimColor = new Color(0f, 0f, 0f, 0.72f);
 
         private static readonly Dictionary<string, float> activeReveals = new Dictionary<string, float>();
+        private static readonly Dictionary<string, bool> pendingByCategory = new Dictionary<string, bool>();
+        private static int pendingCacheVersion = -1;
         private static float revealsUntil;
 
         public static bool Active => BetterArchitectSettings.mysteryUnlocks &&
@@ -30,7 +32,51 @@ namespace BetterArchitect
         public static void Reset()
         {
             activeReveals.Clear();
+            pendingByCategory.Clear();
+            pendingCacheVersion = -1;
             revealsUntil = 0f;
+        }
+
+        public static void DrawPendingMarker(Rect rowRect, string categoryId, List<Designator> designators)
+        {
+            if (!MysteryUnlockTracker.HasPending || categoryId == null || designators == null) return;
+            if (!HasPendingIn(categoryId, designators)) return;
+
+            var markerRect = new Rect(rowRect.xMax - 24f, rowRect.y, 20f, rowRect.height);
+            var oldFont = Text.Font;
+            var oldAnchor = Text.Anchor;
+
+            Text.Font = GameFont.Medium;
+            Text.Anchor = TextAnchor.MiddleCenter;
+            GUI.color = AccentColor;
+            Widgets.Label(markerRect, "!");
+            GUI.color = Color.white;
+
+            Text.Font = oldFont;
+            Text.Anchor = oldAnchor;
+        }
+
+        private static bool HasPendingIn(string categoryId, List<Designator> designators)
+        {
+            if (pendingCacheVersion != MysteryUnlockTracker.Version)
+            {
+                pendingByCategory.Clear();
+                pendingCacheVersion = MysteryUnlockTracker.Version;
+            }
+
+            if (pendingByCategory.TryGetValue(categoryId, out var cached)) return cached;
+
+            var found = false;
+            for (var i = 0; i < designators.Count; i++)
+            {
+                if (IsHidden(designators[i]))
+                {
+                    found = true;
+                    break;
+                }
+            }
+            pendingByCategory[categoryId] = found;
+            return found;
         }
 
         public static bool DrawInsteadOfGizmo(Vector2 topLeft, float size, Designator designator, GizmoRenderParms parms)

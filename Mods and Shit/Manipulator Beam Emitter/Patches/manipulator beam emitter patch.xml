@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MB_ManipulatorBeamEmitter"]/designationCategory</xpath>
+    <value>
+      <designationCategory>UltratechAutomate</designationCategory>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MB_ManipulatorBeamEmitterAuto"]/designationCategory</xpath>
+    <value>
+      <designationCategory>UltratechAutomate</designationCategory>
+    </value>
+  </Operation>
+
+</Patch>

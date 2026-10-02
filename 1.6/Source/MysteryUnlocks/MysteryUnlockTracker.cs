@@ -9,6 +9,7 @@ namespace BetterArchitect
         private List<string> pendingForSave = new List<string>();
 
         public static bool HasPending;
+        public static int Version;
 
         private static bool acceptsMarks;
 
@@ -17,6 +18,7 @@ namespace BetterArchitect
             pending.Clear();
             HasPending = false;
             acceptsMarks = false;
+            Version++;
         }
 
         public static bool IsPending(string defName)
@@ -30,6 +32,7 @@ namespace BetterArchitect
             if (pending.Remove(defName))
             {
                 HasPending = pending.Count > 0;
+                Version++;
             }
         }
 
@@ -37,6 +40,7 @@ namespace BetterArchitect
         {
             pending.Clear();
             HasPending = false;
+            Version++;
         }
 
         public static void MarkPending(BuildableDef def)
@@ -52,7 +56,10 @@ namespace BetterArchitect
                 }
             }
 
-            pending.Add(def.defName);
+            if (pending.Add(def.defName))
+            {
+                Version++;
+            }
             HasPending = true;
         }
 
@@ -120,6 +127,7 @@ namespace BetterArchitect
                     }
                 }
                 HasPending = pending.Count > 0;
+                Version++;
             }
         }
     }

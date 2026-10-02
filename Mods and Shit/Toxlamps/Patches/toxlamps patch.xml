@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[@Name="ToxLampBase"]/designationCategory</xpath>
+    <value>
+      <designationCategory>Ferny_Pollution</designationCategory>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="ToxLamps_FloorLamp"]/designationCategory</xpath>
+    <value>
+      <designationCategory>Ferny_Pollution</designationCategory>
+    </value>
+  </Operation>
+
+</Patch>
