@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <!-- GENERAL STORAGE (both shelves inherit Furniture from Core FurnitureWithQualityBase, so there is no node to replace) -->
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[@Name="SmallShelfBase"]</xpath>
+    <value>
+      <designationCategory>Ferny_GeneralStorage</designationCategory>
+    </value>
+  </Operation>
+
+</Patch>
