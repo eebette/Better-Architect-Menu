@@ -1121,6 +1121,8 @@
     <li IfModActive="natsuki.manipulatorbeam">Mods and Shit/Manipulator Beam Emitter</li>
     <li IfModActive="kvr.beamconstructor">Mods and Shit/Beam Constructor</li>
     <li IfModActive="koni.misc.toxlamps">Mods and Shit/Toxlamps</li>
+    <li IfModActive="co.uk.epicguru.meleeanimation">Mods and Shit/Melee Animation</li>
+    <li IfModActive="Asiimoves.MediStation">Mods and Shit/MediStation</li>
     <!-- (Add new mods here ^^^^^) -->
   </v1.6>
 </loadFolders>
