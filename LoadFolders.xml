@@ -1129,6 +1129,7 @@
     <li IfModActive="NanoCE.GlassLights">Mods and Shit/Glass+Lights</li>
     <li IfModActive="co.uk.epicguru.meleeanimation">Mods and Shit/Melee Animation</li>
     <li IfModActive="Asiimoves.MediStation">Mods and Shit/MediStation</li>
+    <li IfModActive="Niilo007.NiilosQoL">Mods and Shit/Niilo's QoL</li>
     <li IfModActive="RimThunderTeams.RimThunder.EnduringFreedom">Mods and Shit/RimThunder Enduring Freedom</li>
     <li IfModActive="rimfridge.kv.rw">Mods and Shit/RimFridge</li>
     <li IfModActive="Argon.SaltedMeatRemake">Mods and Shit/Salted Meat</li>
