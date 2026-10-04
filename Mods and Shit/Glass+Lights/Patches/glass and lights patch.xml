@@ -24,7 +24,7 @@
     </value>
   </Operation>
 
-  <!-- DOORS (category sits on the abstract base) -->
+  <!-- DOORS -->
   <Operation Class="PatchOperationReplace">
     <success>Always</success>
     <xpath>Defs/ThingDef[@Name="DoorGlassBase"]/designationCategory</xpath>
@@ -42,7 +42,7 @@
     </value>
   </Operation>
 
-  <!-- LIGHTING (category sits on the abstract base) -->
+  <!-- LIGHTING -->
   <Operation Class="PatchOperationReplace">
     <success>Always</success>
     <xpath>Defs/ThingDef[@Name="GlCeilingLampBase"]/designationCategory</xpath>
@@ -50,8 +50,6 @@
       <designationCategory>Ferny_Lighting</designationCategory>
     </value>
   </Operation>
-
-  <!-- LIGHTING -->
   <Operation Class="PatchOperationReplace">
     <success>Always</success>
     <xpath>Defs/ThingDef[defName="OutdoorGroundLamp"]/designationCategory</xpath>
